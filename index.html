@@ -49,6 +49,20 @@
               highlight: "#e0b252",
               light: "rgb(255,236,196)",
               lightT: "rgba(255,236,196, 0.3)"
+            },
+            animation: {
+              'fight-r': 'fight-r 0.5s cubic-bezier(.6,-0.28,.74,.05) 2s alternate 2',
+              'fight-l': 'fight-l 0.5s cubic-bezier(.6,-0.28,.74,.05) 2s alternate 2',
+            },
+            keyframes: {
+              'fight-r': {
+                '0%': { transform: 'translateX(0px)' },
+                '100%': { transform: 'translateX(30px)' },
+              },
+              'fight-l': {
+                '0%': { transform: 'translateX(0px)' },
+                '100%': { transform: 'translateX(-30px)' },
+              }
             }
           }
         }
@@ -66,6 +80,8 @@
           after:h-full after:w-10 after:absolute after:top-1/4 after:-right-6 after:-z-10 after:bg-inherit after:border-2 after:border-primary shadow-lg
           ;
         }
+
+        .banner-secondary { @apply bg-secondary font-VT323 before:w-5 after:w-5 before:-left-3 after:-right-3 }
       }
     </style>
 
@@ -95,30 +111,30 @@
           <h1 class="mb-12 title banner">
             Forest of Facades
           </h1>
-          <p class="bg-primary rounded-full py-1 px-8 font-VT323 text-light text-xl md:text-xl lg:text-2xl">
+          <p class="bg-secondary rounded-full py-1 px-8 font-VT323 text-primary text-xl md:text-xl lg:text-2xl">
             Fight battles using memory and deduction
           </p>
         </div>
         <div class="w-full flex justify-between h-24 sm:h-28 md:h-32 lg:h-36 mt-12 relative">
-          <div class="flex h-full mr-6">
+          <div class="animate-fight-r flex h-full mr-6">
             <img class="h-full mr-4" src="img/hero1.png" />
             <img class="h-full mr-4" src="img/hero2.png" />
             <img class="h-full mr-4 hidden md:inline" src="img/hero3.png" />
           </div>
-          <div class="flex h-full">
+          <div class="animate-fight-l flex h-full">
             <img class="h-full ml-4" src="img/monster1.png" />
             <img class="h-full ml-4" src="img/monster2.png" />
             <img class="h-full ml-4 hidden md:inline" src="img/monster3.png" />
           </div>
         </div>
       </div>
-      <p class="mt-auto py-2 text-center text-lg text-light bg-dark">
+      <p class="mt-auto py-2 text-center text-lg text-secondary bg-dark">
         <span class="block md:inline">An asymmetric competitive puzzle game</span>
         <span class="hidden md:inline">&bull;</span>
         <span class="block md:inline">2-player &bull; 10-minute &bull; Age 8+</span>
       </p>
     </div>
-    <section class="bg-white text-primary py-4">
+    <section class="bg-light text-primary py-4">
       <div class="container max-w-5xl mx-auto m-8 mb-2 pt-1">
 
         <p class="font-bold px-5">
@@ -131,7 +147,7 @@
         </p>
 
         <div data-role="banner" class="w-full flex justify-center mt-8" style="transform: translateZ(0);">
-          <h2 class="my-2 text-2xl font-bold banner font-grenze-gotisch">
+          <h2 class="my-2 text-2xl font-bold banner banner-secondary">
             How to play
           </h2>
         </div>
@@ -141,7 +157,7 @@
 
 
         <div data-role="banner" class="w-full flex justify-center" style="transform: translateZ(0);">
-          <h2 class="my-2 text-2xl font-bold banner font-grenze-gotisch">
+          <h2 class="my-2 text-2xl font-bold banner banner-secondary">
             Physical Prototype
           </h2>
         </div>
