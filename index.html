@@ -30,6 +30,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <link href="lightbox/lightbox.min.css" rel="stylesheet">
 
     <script>
       WebFont.load({ google: { families: ["Grenze Gotisch", "VT323"] } });
@@ -171,52 +172,44 @@
           <div class="container px-5 py-2 mx-auto">
             <div class="flex flex-wrap -m-1 md:-m-2">
               <div class="flex flex-wrap w-1/4">
-                <div class="w-full p-1 md:p-2">
-                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                    src="img/monsters.jpg">
-                </div>
+                <a class="w-full p-1 md:p-2 outline-none" href="img/monsters.jpg" data-lightbox="gallery">
+                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg" src="img/monsters.jpg">
+                </a>
               </div>
               <div class="flex flex-wrap w-1/4">
-                <div class="w-full p-1 md:p-2">
-                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                    src="img/heroes.jpg">
-                </div>
+                <a class="w-full p-1 md:p-2 outline-none" href="img/heroes.jpg" data-lightbox="gallery">
+                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg" src="img/heroes.jpg">
+                </a>
               </div>
               <div class="flex flex-wrap w-1/4">
-                <div class="w-full p-1 md:p-2">
-                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                    src="img/box.jpg">
-                </div>
+                <a class="w-full p-1 md:p-2 outline-none" href="img/box.jpg" data-lightbox="gallery">
+                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg" src="img/box.jpg">
+                </a>
               </div>
               <div class="flex flex-wrap w-1/4">
-                <div class="w-full p-1 md:p-2">
-                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                    src="img/setup.jpg">
-                </div>
+                <a class="w-full p-1 md:p-2 outline-none" href="img/setup.jpg" data-lightbox="gallery">
+                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg" src="img/setup.jpg">
+                </a>
               </div>
               <div class="flex flex-wrap w-1/4">
-                <div class="w-full p-1 md:p-2">
-                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                    src="img/decks.jpg">
-                </div>
+                <a class="w-full p-1 md:p-2 outline-none" href="img/decks.jpg" data-lightbox="gallery">
+                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg" src="img/decks.jpg">
+                </a>
               </div>
               <div class="flex flex-wrap w-1/4">
-                <div class="w-full p-1 md:p-2">
-                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                    src="img/in-play.jpg">
-                </div>
+                <a class="w-full p-1 md:p-2 outline-none" href="img/in-play.jpg" data-lightbox="gallery">
+                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg" src="img/in-play.jpg">
+                </a>
               </div>
               <div class="flex flex-wrap w-1/4">
-                <div class="w-full p-1 md:p-2">
-                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                    src="img/components.jpg">
-                </div>
+                <a class="w-full p-1 md:p-2 outline-none" href="img/components.jpg" data-lightbox="gallery">
+                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg" src="img/components.jpg">
+                </a>
               </div>
               <div class="flex flex-wrap w-1/4">
-                <div class="w-full p-1 md:p-2">
-                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                    src="img/skill-tile.jpg">
-                </div>
+                <a class="w-full p-1 md:p-2 outline-none" href="img/skill-tile.jpg" data-lightbox="gallery">
+                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg" src="img/skill-tile.jpg">
+                </a>
               </div>
             </div>
           </div>
@@ -260,36 +253,26 @@
       </div>
     </section>
     <!--Footer-->
-    <footer class="bg-white">
+    <footer class="bg-light text-primary">
       <div class="container mx-auto max-w-5xl px-8">
         <div class="w-full flex flex-col md:flex-row py-6">
           <div class="flex-1 mr-1">
-            <p class="uppercase text-gray-500 md:mb-6">Store</p>
+            <p class="uppercase md:mb-4">Other games by Jeff Schomay</p>
             <ul class="list-reset mb-6">
               <li class="mt-2 md:mr-0">
-                <a href="https://www.thegamecrafter.com/games/microscopic" class="no-underline hover:underline text-gray-800 hover:text-pink-500" title="Microscopic card game shop page on The Game Crafter">Shop page</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="https://www.thegamecrafter.com/games/microscopic-pnp" class="no-underline hover:underline text-gray-800 hover:text-pink-500" title="Microscopicprint and play card game ">Print-and-play version</a>
-              </li>
-            </ul>
-          </div>
-          <div class="flex-1 mr-1">
-            <p class="uppercase text-gray-500 md:mb-6">Connect</p>
-            <ul class="list-reset mb-6">
-              <li class="mt-2  md:mr-0">
-                <a href="https://boardgamegeek.com/boardgame/347219/microscopic" class="no-underline hover:underline text-gray-800 hover:text-pink-500" title="Microscopic set collection card game on Board Game Geek">BGG</a>
+                <a href="https://microscopicgame.com" class="underline" title="Microscopic card game">Microscopic</a>
+                <p class="text-sm">Race to evolve genes into cells into organisms</p>
               </li>
             </ul>
           </div>
           <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Contact</p>
+            <p class="uppercase md:mb-4">Contact</p>
             <ul class="list-reset mb-6">
               <li class="mt-2 md:mr-0">
-                <a href="mailto:contact@microscopicgame.com" class="no-underline hover:underline text-gray-800 hover:text-pink-500">contact@microscopicgame.com</a>
+                <a href="mailto:contact@jeffschomay.games" class="underline">contact@jeffschomay.games</a>
               </li>
               <li class="mt-2 md:mr-0">
-                <p class="text-gray-500 md:mb-6">© 2021. All Rights Reserved</p>
+                <a href="https://landing.mailerlite.com/webforms/landing/b1p1o8" class="underline">Get updates for Forest of Facades</a>
               </li>
             </ul>
           </div>
@@ -297,7 +280,7 @@
       </div>
     </footer>
 
-    <!-- <script data-goatcounter="https://microscopicgame.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> -->
+    <script data-goatcounter="https://forest-of-facades.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     <!-- MailerLite Universal -->
     <script>
       (function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
@@ -310,5 +293,6 @@
     </script>
     <!-- End MailerLite Universal -->
 
+    <script src="lightbox/lightbox.min.js"></script>
   </body>
 </html>
