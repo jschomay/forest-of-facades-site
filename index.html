@@ -1,76 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Forest of Facades - An asymmetric competitive puzzle card game</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
 
-    <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="icons/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>
+    Forest of Facades - An asymmetric competitive puzzle card game
+  </title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-    <link href="lightbox/lightbox.min.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png" />
+  <link rel="manifest" href="icons/manifest.json" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png" />
+  <meta name="theme-color" content="#ffffff" />
 
-    <script>
-      WebFont.load({ google: { families: ["Grenze Gotisch", "VT323"] } });
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-                'sans': 'Helvetica, Arial, sans-serif',
-                'grenze-gotisch': 'Grenze\\ Gotisch',
-                'VT323': 'VT323',
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <link href="lightbox/lightbox.min.css" rel="stylesheet" />
+
+  <script>
+    WebFont.load({google: {families: ["Grenze Gotisch", "VT323"]}});
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: "Helvetica, Arial, sans-serif",
+            "grenze-gotisch": "Grenze\\ Gotisch",
+            VT323: "VT323"
+          },
+          colors: {
+            primary: "rgba(60,44,11,1)",
+            dark: "#151826",
+            secondary: "rgba(161,115,20,1)",
+            secondaryT: "rgba(161,115,20,0.85)",
+            highlight: "#e0b252",
+            light: "rgb(255,236,196)",
+            lightT: "rgba(255,236,196, 0.3)"
+          },
+          animation: {
+            "fight-r":
+              "fight-r 0.5s cubic-bezier(.6,-0.28,.74,.05) 2s alternate 2",
+            "fight-l":
+              "fight-l 0.5s cubic-bezier(.6,-0.28,.74,.05) 2s alternate 2"
+          },
+          keyframes: {
+            "fight-r": {
+              "0%": {transform: "translateX(0px)"},
+              "100%": {transform: "translateX(30px)"}
             },
-            colors: {
-              primary: "rgba(60,44,11,1)",
-              dark: "#151826",
-              secondary: "rgba(161,115,20,1)",
-              secondaryT: "rgba(161,115,20,0.85)",
-              highlight: "#e0b252",
-              light: "rgb(255,236,196)",
-              lightT: "rgba(255,236,196, 0.3)"
-            },
-            animation: {
-              'fight-r': 'fight-r 0.5s cubic-bezier(.6,-0.28,.74,.05) 2s alternate 2',
-              'fight-l': 'fight-l 0.5s cubic-bezier(.6,-0.28,.74,.05) 2s alternate 2',
-            },
-            keyframes: {
-              'fight-r': {
-                '0%': { transform: 'translateX(0px)' },
-                '100%': { transform: 'translateX(30px)' },
-              },
-              'fight-l': {
-                '0%': { transform: 'translateX(0px)' },
-                '100%': { transform: 'translateX(-30px)' },
-              }
+            "fight-l": {
+              "0%": {transform: "translateX(0px)"},
+              "100%": {transform: "translateX(-30px)"}
             }
           }
         }
       }
-    </script>
-    <style type="text/tailwindcss">
-      @layer components {
+    };
+  </script>
+  <style type="text/tailwindcss">
+    @layer components {
         .title {
           @apply font-grenze-gotisch text-4xl sm:text-5xl md:text-6xl lg:text-7xl;
         }
@@ -78,221 +83,275 @@
         .banner {
           @apply bg-light text-primary border-2 border-primary shadow-lg px-4 py-2 relative
           before:h-full before:w-10 before:absolute before:top-1/4 before:-left-6 before:-z-10 before:bg-inherit before:border-2 before:border-primary shadow-lg
-          after:h-full after:w-10 after:absolute after:top-1/4 after:-right-6 after:-z-10 after:bg-inherit after:border-2 after:border-primary shadow-lg
-          ;
+          after:h-full after:w-10 after:absolute after:top-1/4 after:-right-6 after:-z-10 after:bg-inherit after:border-2 after:border-primary shadow-lg;
         }
 
-        .banner-secondary { @apply bg-secondary font-VT323 before:w-5 after:w-5 before:-left-3 after:-right-3 }
+        .banner-secondary {
+          @apply bg-secondary font-VT323 before:w-5 after:w-5 before:-left-3 after:-right-3;
+        }
       }
     </style>
 
-    <style>
-      .gradient {
-         background: rgb(29,37,85);
-         background: linear-gradient(90deg, rgba(29,37,85,1) 0%, rgba(29,131,198,1) 100%) !important;
-      }
-      .hover\:gradient-highlight:hover {
-        background: linear-gradient(90deg, rgba(47,60,142,1) 0%, rgba(176,63,184,1) 100%) !important;
-      }
-      .gradient-highlight {
-        background: linear-gradient(90deg, rgba(47,60,142,1) 0%, rgba(176,63,184,1) 100%);
-      }
-      .bg {
-        background: center / cover url("img/bg.png"); background-attachment: fixed;
-        image-rendering: crisp-edges;
-        image-rendering: pixelated;
-      }
-      .max-w-2xs { max-width: 12em; }
-    </style>
-  </head>
-  <body class="text-white bg">
-    <div class="flex flex-col justify-center h-screen min-h-96 bg-black bg-opacity-10" style="min-height: 600px;">
-      <div class="px-3 pt-32 my-auto mx-auto flex flex-wrap flex-col items-center">
-        <div class="flex flex-col w-full justify-center items-center">
-          <h1 class="mb-12 title banner">
-            Forest of Facades
-          </h1>
-          <p class="bg-secondary rounded-full py-1 px-8 font-VT323 text-center text-primary text-base md:text-xl md:text-xl lg:text-2xl">
-            Fight battles of deduction and deception
-          </p>
+  <style>
+    .gradient {
+      background: rgb(29, 37, 85);
+      background: linear-gradient(90deg,
+          rgba(29, 37, 85, 1) 0%,
+          rgba(29, 131, 198, 1) 100%) !important;
+    }
+
+    .hover\:gradient-highlight:hover {
+      background: linear-gradient(90deg,
+          rgba(47, 60, 142, 1) 0%,
+          rgba(176, 63, 184, 1) 100%) !important;
+    }
+
+    .gradient-highlight {
+      background: linear-gradient(90deg,
+          rgba(47, 60, 142, 1) 0%,
+          rgba(176, 63, 184, 1) 100%);
+    }
+
+    .bg {
+      background: center / cover url("img/bg.png");
+      background-attachment: fixed;
+      image-rendering: crisp-edges;
+      image-rendering: pixelated;
+    }
+
+    .max-w-2xs {
+      max-width: 12em;
+    }
+  </style>
+</head>
+
+<body class="text-white bg">
+  <div class="flex flex-col justify-center h-screen min-h-96 bg-black bg-opacity-10" style="min-height: 600px;">
+    <div class="px-3 pt-32 my-auto mx-auto flex flex-wrap flex-col items-center">
+      <div class="flex flex-col w-full justify-center items-center">
+        <h1 class="mb-12 title banner">
+          Forest of Facades
+        </h1>
+        <p
+          class="bg-secondary rounded-full py-1 px-8 font-VT323 text-center text-primary text-base md:text-xl md:text-xl lg:text-2xl">
+          Fight battles of deduction and deception
+        </p>
+      </div>
+      <div class="w-full flex justify-between h-24 sm:h-28 md:h-32 lg:h-36 mt-12 relative">
+        <div class="animate-fight-r flex h-full mr-6">
+          <img class="h-full mr-4" src="img/hero1.png" />
+          <img class="h-full mr-4" src="img/hero2.png" />
+          <img class="h-full mr-4 hidden md:inline" src="img/hero3.png" />
         </div>
-        <div class="w-full flex justify-between h-24 sm:h-28 md:h-32 lg:h-36 mt-12 relative">
-          <div class="animate-fight-r flex h-full mr-6">
-            <img class="h-full mr-4" src="img/hero1.png" />
-            <img class="h-full mr-4" src="img/hero2.png" />
-            <img class="h-full mr-4 hidden md:inline" src="img/hero3.png" />
-          </div>
-          <div class="animate-fight-l flex h-full">
-            <img class="h-full ml-4" src="img/monster1.png" />
-            <img class="h-full ml-4" src="img/monster2.png" />
-            <img class="h-full ml-4 hidden md:inline" src="img/monster3.png" />
-          </div>
+        <div class="animate-fight-l flex h-full">
+          <img class="h-full ml-4" src="img/monster1.png" />
+          <img class="h-full ml-4" src="img/monster2.png" />
+          <img class="h-full ml-4 hidden md:inline" src="img/monster3.png" />
         </div>
       </div>
-      <p class="mt-auto py-2 text-center text-lg text-secondary bg-dark">
-        <span class="block md:inline">An asymmetric competitive puzzle game</span>
-        <span class="hidden md:inline">&bull;</span>
-        <span class="block md:inline">2-player &bull; 10-minute &bull; Age 8+</span>
-      </p>
     </div>
-    <section class="bg-light text-primary py-4">
-      <div class="container max-w-5xl mx-auto m-8 mb-2 pt-1">
+    <p class="mt-auto py-2 text-center text-lg text-secondary bg-dark">
+      <span class="block md:inline">An asymmetric competitive puzzle game</span>
+      <span class="hidden md:inline">&bull;</span>
+      <span class="block md:inline">2-player &bull; 10-minute &bull; Age 8+</span>
+    </p>
+  </div>
+  <section class="bg-light text-primary py-4">
+    <div class="container max-w-5xl mx-auto m-8 mb-2 pt-1">
+      <p class="font-bold px-5">
+        Monsters have emerged from the forest to attack your village! You call
+        on heroes to defend. There's just one problem --
+        <em>only one player knows each card's strength!</em> One player has to
+        deduce the hidden strengths from the outcomes of previous battles
+        before time runs out, and the other has to reveal as little
+        information as possible long enough to destroy the whole village.
+      </p>
 
-        <p class="font-bold px-5">
-          Monsters have emerged from the forest to attack your village!  You call on
-          heroes to defend.  There's just one problem -- <em>only one player knows each
-          card's strength!</em>  One player has to deduce the hidden strengths from the
-          outcomes of previous battles before time runs out, and the other has to
-          reveal as little information as possible long enough to destroy the whole
-          village.
-        </p>
+      <div data-role="banner" class="w-full flex justify-center mt-8" style="transform: translateZ(0);">
+        <h2 class="my-2 text-2xl font-bold banner banner-secondary">
+          How to play
+        </h2>
+      </div>
+      <div class="w-full mb-4 p-6">
+        <iframe width="720" height="405" class="w-full block" src="https://www.youtube.com/embed/NF9h5an0txk"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
 
-        <div data-role="banner" class="w-full flex justify-center mt-8" style="transform: translateZ(0);">
-          <h2 class="my-2 text-2xl font-bold banner banner-secondary">
-            How to play
-          </h2>
-        </div>
-        <div class="w-full mb-4 p-6">
-          <iframe width="720" height="405" class="w-full block" src="https://www.youtube.com/embed/NF9h5an0txk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+      <div data-role="banner" class="w-full flex justify-center" style="transform: translateZ(0);">
+        <h2 class="my-2 text-2xl font-bold banner banner-secondary">
+          Physical Prototype
+        </h2>
+      </div>
 
+      <ul class="px-5 list-disc list-inside">
+        <li class="">32 cards</li>
+        <li class="">21 tiles</li>
+      </ul>
 
-        <div data-role="banner" class="w-full flex justify-center" style="transform: translateZ(0);">
-          <h2 class="my-2 text-2xl font-bold banner banner-secondary">
-            Physical Prototype
-          </h2>
-        </div>
-
-        <ul class="px-5 list-disc list-inside">
-          <li class="">32 cards</li>
-          <li class="">21 tiles</li>
-        </ul>
-
-        <section class="overflow-hidden mt-8">
-          <div class="container px-5 py-2 mx-auto">
-            <div class="flex flex-wrap -m-1 md:-m-2">
-              <div class="flex flex-wrap w-1/4">
-                <a class="w-full p-1 md:p-2 outline-none" href="img/monsters.jpg" data-lightbox="gallery">
-                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg" src="img/monsters.jpg">
-                </a>
-              </div>
-              <div class="flex flex-wrap w-1/4">
-                <a class="w-full p-1 md:p-2 outline-none" href="img/heroes.jpg" data-lightbox="gallery">
-                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg" src="img/heroes.jpg">
-                </a>
-              </div>
-              <div class="flex flex-wrap w-1/4">
-                <a class="w-full p-1 md:p-2 outline-none" href="img/box.jpg" data-lightbox="gallery">
-                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg" src="img/box.jpg">
-                </a>
-              </div>
-              <div class="flex flex-wrap w-1/4">
-                <a class="w-full p-1 md:p-2 outline-none" href="img/setup.jpg" data-lightbox="gallery">
-                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg" src="img/setup.jpg">
-                </a>
-              </div>
-              <div class="flex flex-wrap w-1/4">
-                <a class="w-full p-1 md:p-2 outline-none" href="img/decks.jpg" data-lightbox="gallery">
-                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg" src="img/decks.jpg">
-                </a>
-              </div>
-              <div class="flex flex-wrap w-1/4">
-                <a class="w-full p-1 md:p-2 outline-none" href="img/in-play.jpg" data-lightbox="gallery">
-                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg" src="img/in-play.jpg">
-                </a>
-              </div>
-              <div class="flex flex-wrap w-1/4">
-                <a class="w-full p-1 md:p-2 outline-none" href="img/components.jpg" data-lightbox="gallery">
-                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg" src="img/components.jpg">
-                </a>
-              </div>
-              <div class="flex flex-wrap w-1/4">
-                <a class="w-full p-1 md:p-2 outline-none" href="img/skill-tile.jpg" data-lightbox="gallery">
-                  <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg" src="img/skill-tile.jpg">
-                </a>
-              </div>
+      <section class="overflow-hidden mt-8">
+        <div class="container px-5 py-2 mx-auto">
+          <div class="flex flex-wrap -m-1 md:-m-2">
+            <div class="flex flex-wrap w-1/4">
+              <a class="w-full p-1 md:p-2 outline-none" href="img/monsters.jpg" data-lightbox="gallery">
+                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                  src="img/monsters.jpg" />
+              </a>
+            </div>
+            <div class="flex flex-wrap w-1/4">
+              <a class="w-full p-1 md:p-2 outline-none" href="img/heroes.jpg" data-lightbox="gallery">
+                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                  src="img/heroes.jpg" />
+              </a>
+            </div>
+            <div class="flex flex-wrap w-1/4">
+              <a class="w-full p-1 md:p-2 outline-none" href="img/box.jpg" data-lightbox="gallery">
+                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                  src="img/box.jpg" />
+              </a>
+            </div>
+            <div class="flex flex-wrap w-1/4">
+              <a class="w-full p-1 md:p-2 outline-none" href="img/setup.jpg" data-lightbox="gallery">
+                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                  src="img/setup.jpg" />
+              </a>
+            </div>
+            <div class="flex flex-wrap w-1/4">
+              <a class="w-full p-1 md:p-2 outline-none" href="img/decks.jpg" data-lightbox="gallery">
+                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                  src="img/decks.jpg" />
+              </a>
+            </div>
+            <div class="flex flex-wrap w-1/4">
+              <a class="w-full p-1 md:p-2 outline-none" href="img/in-play.jpg" data-lightbox="gallery">
+                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                  src="img/in-play.jpg" />
+              </a>
+            </div>
+            <div class="flex flex-wrap w-1/4">
+              <a class="w-full p-1 md:p-2 outline-none" href="img/components.jpg" data-lightbox="gallery">
+                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                  src="img/components.jpg" />
+              </a>
+            </div>
+            <div class="flex flex-wrap w-1/4">
+              <a class="w-full p-1 md:p-2 outline-none" href="img/skill-tile.jpg" data-lightbox="gallery">
+                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                  src="img/skill-tile.jpg" />
+              </a>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
+    </div>
+  </section>
 
+  <section class="container mx-auto text-center py-20 mb-12">
+    <div class="mx-auto container max-w-5xl flex flex-wrap p-5">
+      <div
+        class="p-4 mr-4 rounded-md flex flex-col flex-grow justify-start items-center flex-shrink bg-dark text-secondary">
+        <h3 class="w-full font-bold text-xl text-center mb-2">
+          View the sell sheet
+        </h3>
+        <a href="forest-of-facades-sell-sheet.pdf" title="Download sell sheet">
+          <img class="h-60 border-[1px] border-secondary" src="img/sellsheet-thumb.jpg"
+            alt="Forest of Facades Sell Sheet" />
+        </a>
       </div>
 
-    </section>
+      <div class="p-4 rounded-md flex flex-col flex-grow justify-start items-center flex-shrink bg-dark text-secondary">
+        <h3 class="w-full font-bold text-xl text-center mb-2">
+          View the rules
+        </h3>
+        <a href="forest-of-facades-rules.pdf" title="Download rules">
+          <img class="h-60 border-[1px] border-secondary" src="img/rules-thumb.jpg" alt="Forest of Facades rules" />
+        </a>
+      </div>
 
-    <section class="container mx-auto text-center py-20 mb-12">
-      <div class="mx-auto container max-w-5xl flex flex-wrap p-5">
-        <div class="p-4 mr-4 rounded-md flex flex-col flex-grow justify-start items-center flex-shrink bg-dark text-secondary">
-          <h3 class="w-full font-bold text-xl text-center mb-2">View the sell sheet</h3>
-          <a href="forest-of-facades-sell-sheet.pdf" title="Download sell sheet">
-            <img class="h-60 border-[1px] border-secondary" src="img/sellsheet-thumb.jpg" alt="Forest of Facades Sell Sheet" />
-          </a>
-        </div>
-
-        <div class="p-4 rounded-md flex flex-col flex-grow justify-start items-center flex-shrink bg-dark text-secondary">
-          <h3 class="w-full font-bold text-xl text-center mb-2">View the rules</h3>
-          <a href="forest-of-facades-rules.pdf" title="Download rules">
-            <img class="h-60 border-[1px] border-secondary" src="img/rules-thumb.jpg" alt="Forest of Facades rules" />
-          </a>
-        </div>
-
-        <div class="w-full p-4 mt-4 rounded-md flex flex-col flex-grow justify-start items-start flex-shrink bg-dark text-secondary">
-          <h3 class="w-full font-bold text-xl text-center mb-2">Play the prototype</h3>
-          <ul class="list-disc list-inside text-left">
-            <li class="">
-              <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2685250690" class="underline mb-2" title="Play the digital prototype">
-                Play the digital prototype on Tabletop Simulator
-              </a>
+      <div
+        class="w-full p-4 mt-4 rounded-md flex flex-col flex-grow justify-start items-start flex-shrink bg-dark text-secondary">
+        <h3 class="w-full font-bold text-xl text-center mb-2">
+          Play the prototype
+        </h3>
+        <ul class="list-disc list-inside text-left">
+          <li class="">
+            <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2685250690" class="underline mb-2"
+              title="Play the digital prototype">
+              Play the digital prototype on Tabletop Simulator
+            </a>
+          </li>
+          <li class="">
+            <a href="mailto:contact@jeffschomay.games" class="underline" title="contact">
+              Contact Jeff Schomay for physical prototype
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!--Footer-->
+  <footer class="bg-light text-primary">
+    <div class="container mx-auto max-w-5xl px-8">
+      <div class="w-full flex flex-col md:flex-row py-6">
+        <div class="flex-1 mr-1">
+          <p class="uppercase md:mb-4">Other games by Jeff Schomay</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 md:mr-0">
+              <a href="https://microscopicgame.com" class="underline" title="Microscopic card game">Microscopic</a>
+              <p class="text-sm">
+                Race to evolve genes into cells into organisms
+              </p>
             </li>
-            <li class="">
-              <a href="mailto:contact@jeffschomay.games" class="underline" title="contact">
-                Contact Jeff Schomay for physical prototype
-              </a>
+          </ul>
+        </div>
+        <div class="flex-1">
+          <p class="uppercase md:mb-4">Contact</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 md:mr-0">
+              <a href="mailto:contact@jeffschomay.games" class="underline">contact@jeffschomay.games</a>
+            </li>
+            <li class="mt-2 md:mr-0">
+              <a href="https://landing.mailerlite.com/webforms/landing/b1p1o8" class="underline">Get updates for Forest
+                of Facades</a>
             </li>
           </ul>
         </div>
       </div>
-    </section>
-    <!--Footer-->
-    <footer class="bg-light text-primary">
-      <div class="container mx-auto max-w-5xl px-8">
-        <div class="w-full flex flex-col md:flex-row py-6">
-          <div class="flex-1 mr-1">
-            <p class="uppercase md:mb-4">Other games by Jeff Schomay</p>
-            <ul class="list-reset mb-6">
-              <li class="mt-2 md:mr-0">
-                <a href="https://microscopicgame.com" class="underline" title="Microscopic card game">Microscopic</a>
-                <p class="text-sm">Race to evolve genes into cells into organisms</p>
-              </li>
-            </ul>
-          </div>
-          <div class="flex-1">
-            <p class="uppercase md:mb-4">Contact</p>
-            <ul class="list-reset mb-6">
-              <li class="mt-2 md:mr-0">
-                <a href="mailto:contact@jeffschomay.games" class="underline">contact@jeffschomay.games</a>
-              </li>
-              <li class="mt-2 md:mr-0">
-                <a href="https://landing.mailerlite.com/webforms/landing/b1p1o8" class="underline">Get updates for Forest of Facades</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script data-goatcounter="https://forest-of-facades.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-    <!-- MailerLite Universal -->
-    <script>
-      (function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
-        var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
-        f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
-        var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
-        _.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+  <script data-goatcounter="https://forest-of-facades.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <!-- MailerLite Universal -->
+  <script>
+    (function (m, a, i, l, e, r) {
+      m["MailerLiteObject"] = e;
+      function f() {
+        var c = {a: arguments, q: []};
+        var r = this.push(c);
+        return "number" != typeof r ? r : f.bind(c.q);
+      }
+      f.q = f.q || [];
+      m[e] = m[e] || f.bind(f.q);
+      m[e].q = m[e].q || f.q;
+      r = a.createElement(i);
+      var _ = a.getElementsByTagName(i)[0];
+      r.async = 1;
+      r.src = l + "?v" + ~~(new Date().getTime() / 1000000);
+      _.parentNode.insertBefore(r, _);
+    })(
+      window,
+      document,
+      "script",
+      "https://static.mailerlite.com/js/universal.js",
+      "ml"
+    );
 
-      var ml_account = ml('accounts', '3597725', 'w0r3w5t2t1', 'load');
-    </script>
-    <!-- End MailerLite Universal -->
+    var ml_account = ml("accounts", "3597725", "w0r3w5t2t1", "load");
+  </script>
+  <!-- End MailerLite Universal -->
 
-    <script src="lightbox/lightbox.min.js"></script>
-  </body>
+  <script src="lightbox/lightbox.min.js"></script>
+</body>
+
 </html>
