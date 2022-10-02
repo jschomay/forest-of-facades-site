@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>
-    Forest of Facades - An asymmetric competitive puzzle card game
+    Deduction Dungeon - An asymmetric card game of loot, logic, and luck
   </title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
-  <meta name="author" content="" />
+  <meta name="author" content="Jeff Schomay" />
 
   <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png" />
@@ -31,6 +31,7 @@
   <meta name="theme-color" content="#ffffff" />
 
   <script src="https://cdn.tailwindcss.com"></script>
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
   <link href="lightbox/lightbox.min.css" rel="stylesheet" />
@@ -77,7 +78,7 @@
   <style type="text/tailwindcss">
     @layer components {
         .title {
-          @apply font-grenze-gotisch text-4xl sm:text-5xl md:text-6xl lg:text-7xl;
+          @apply font-grenze-gotisch text-center sm:py-4 sm:px-8 text-4xl sm:text-5xl md:text-6xl lg:text-7xl;
         }
 
         .banner {
@@ -129,165 +130,109 @@
   <div class="flex flex-col justify-center h-screen min-h-96 bg-black bg-opacity-10" style="min-height: 600px;">
     <div class="px-3 pt-32 my-auto mx-auto flex flex-wrap flex-col items-center">
       <div class="flex flex-col w-full justify-center items-center">
-        <h1 class="mb-12 title banner">
-          Forest of Facades
+        <h1 class="mb-10 title banner">
+          Deduction Dungeon
         </h1>
         <p
-          class="bg-secondary rounded-full py-1 px-8 font-VT323 text-center text-primary text-base md:text-xl md:text-xl lg:text-2xl">
-          Fight battles of deduction and deception
+          class="bg-secondary rounded-full py-1 px-8 mb-4 font-VT323 text-center text-primary text-base md:text-xl md:text-xl lg:text-2xl">
+          An asymmetric card game of loot, logic, and luck
         </p>
       </div>
       <div class="w-full flex justify-between h-24 sm:h-28 md:h-32 lg:h-36 mt-12 relative">
-        <div class="animate-fight-r flex h-full mr-6">
-          <img class="h-full mr-4" src="img/hero1.png" />
-          <img class="h-full mr-4" src="img/hero2.png" />
-          <img class="h-full mr-4 hidden md:inline" src="img/hero3.png" />
+        <div class="animate-fight-r flex h-full mr-6 cards">
+          <img class="h-full border-sm mr-4 hidden lg:inline" src="img/hero4.png" />
+          <img class="h-full border-sm mr-4" src="img/hero1.png" />
+          <img class="h-full border-sm mr-4" src="img/hero2.png" />
+          <img class="h-full border-sm mr-4 hidden md:inline" src="img/hero3.png" />
         </div>
-        <div class="animate-fight-l flex h-full">
-          <img class="h-full ml-4" src="img/monster1.png" />
-          <img class="h-full ml-4" src="img/monster2.png" />
-          <img class="h-full ml-4 hidden md:inline" src="img/monster3.png" />
+        <div class="animate-fight-l flex h-full cards">
+          <img class="h-full border-sm ml-4" src="img/monster1.png" />
+          <img class="h-full border-sm ml-4" src="img/monster2.png" />
+          <img class="h-full border-sm ml-4 hidden md:inline" src="img/monster3.png" />
+          <img class="h-full border-sm ml-4 hidden lg:inline" src="img/monster4.png" />
         </div>
       </div>
     </div>
-    <p class="mt-auto py-2 text-center text-lg text-secondary bg-dark">
-      <span class="block md:inline">An asymmetric competitive puzzle game</span>
-      <span class="hidden md:inline">&bull;</span>
-      <span class="block md:inline">2-player &bull; 10-minute &bull; Age 8+</span>
+    <p class="mt-auto py-2 bg-primary text-light text-center text-lg">
+      2-player &bull; 10-minute &bull; Age 8+
     </p>
   </div>
   <section class="bg-light text-primary py-4">
     <div class="container max-w-5xl mx-auto m-8 mb-2 pt-1">
-      <p class="font-bold px-5">
-        Monsters have emerged from the forest to attack your village! You call
-        on heroes to defend. There's just one problem --
-        <em>only one player knows each card's strength!</em> One player has to
-        deduce the hidden strengths from the outcomes of previous battles
-        before time runs out, and the other has to reveal as little
-        information as possible long enough to destroy the whole village.
+      <p class="font-grenze-gotisch font-bold px-5 text-2xl">
+        Deduction Dungeon's vast treasures tempt adventurers from across the
+        land...
       </p>
 
-      <div data-role="banner" class="w-full flex justify-center mt-8" style="transform: translateZ(0);">
-        <h2 class="my-2 text-2xl font-bold banner banner-secondary">
-          How to play
-        </h2>
-      </div>
+      <p class="px-5">
+        But the dungeon is guarded, and each time you enter, the monsters get
+        better at keeping you out. Will you loot the treasure before they
+        learn how to stop you? One player plays the adventurers and the other
+        plays the monsters. Only one knows each card’s hidden strengths.
+      </p>
+
       <div class="w-full mb-4 p-6">
-        <iframe width="720" height="405" class="w-full block" src="https://www.youtube.com/embed/NF9h5an0txk"
+        <iframe width="720" height="405" class="w-full block" src="https://www.youtube.com/embed/x7jCgcSvP6Y"
           title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
       </div>
 
-      <div data-role="banner" class="w-full flex justify-center" style="transform: translateZ(0);">
-        <h2 class="my-2 text-2xl font-bold banner banner-secondary">
-          Physical Prototype
-        </h2>
-      </div>
-
-      <ul class="px-5 list-disc list-inside">
-        <li class="">32 cards</li>
-        <li class="">21 tiles</li>
-      </ul>
-
-      <section class="overflow-hidden mt-8">
-        <div class="container px-5 py-2 mx-auto">
-          <div class="flex flex-wrap -m-1 md:-m-2">
-            <div class="flex flex-wrap w-1/4">
-              <a class="w-full p-1 md:p-2 outline-none" href="img/monsters.jpg" data-lightbox="gallery">
-                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                  src="img/monsters.jpg" />
-              </a>
-            </div>
-            <div class="flex flex-wrap w-1/4">
-              <a class="w-full p-1 md:p-2 outline-none" href="img/heroes.jpg" data-lightbox="gallery">
-                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                  src="img/heroes.jpg" />
-              </a>
-            </div>
-            <div class="flex flex-wrap w-1/4">
-              <a class="w-full p-1 md:p-2 outline-none" href="img/box.jpg" data-lightbox="gallery">
-                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                  src="img/box.jpg" />
-              </a>
-            </div>
-            <div class="flex flex-wrap w-1/4">
-              <a class="w-full p-1 md:p-2 outline-none" href="img/setup.jpg" data-lightbox="gallery">
-                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                  src="img/setup.jpg" />
-              </a>
-            </div>
-            <div class="flex flex-wrap w-1/4">
-              <a class="w-full p-1 md:p-2 outline-none" href="img/decks.jpg" data-lightbox="gallery">
-                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                  src="img/decks.jpg" />
-              </a>
-            </div>
-            <div class="flex flex-wrap w-1/4">
-              <a class="w-full p-1 md:p-2 outline-none" href="img/in-play.jpg" data-lightbox="gallery">
-                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                  src="img/in-play.jpg" />
-              </a>
-            </div>
-            <div class="flex flex-wrap w-1/4">
-              <a class="w-full p-1 md:p-2 outline-none" href="img/components.jpg" data-lightbox="gallery">
-                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                  src="img/components.jpg" />
-              </a>
-            </div>
-            <div class="flex flex-wrap w-1/4">
-              <a class="w-full p-1 md:p-2 outline-none" href="img/skill-tile.jpg" data-lightbox="gallery">
-                <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                  src="img/skill-tile.jpg" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
   </section>
+
 
   <section class="container mx-auto text-center py-20 mb-12">
     <div class="mx-auto container max-w-5xl flex flex-wrap p-5">
-      <div
-        class="p-4 mr-4 rounded-md flex flex-col flex-grow justify-start items-center flex-shrink bg-dark text-secondary">
-        <h3 class="w-full font-bold text-xl text-center mb-2">
-          View the sell sheet
-        </h3>
-        <a href="forest-of-facades-sell-sheet.pdf" title="Download sell sheet">
-          <img class="h-60 border-[1px] border-secondary" src="img/sellsheet-thumb.jpg"
-            alt="Forest of Facades Sell Sheet" />
-        </a>
-      </div>
-
-      <div class="p-4 rounded-md flex flex-col flex-grow justify-start items-center flex-shrink bg-dark text-secondary">
-        <h3 class="w-full font-bold text-xl text-center mb-2">
-          View the rules
-        </h3>
-        <a href="forest-of-facades-rules.pdf" title="Download rules">
-          <img class="h-60 border-[1px] border-secondary" src="img/rules-thumb.jpg" alt="Forest of Facades rules" />
-        </a>
+      <div class="w-full p-4 mb-4 rounded-md flex-grow flex-shrink bg-primary text-light">
+        <p class="text-xl mb-2">
+          Play the digital prototype at
+          <a href="https://screentop.gg/@jschomay/deductiondungeon" class="underline mb-2 block lg:inline"
+            title="Play the digital prototype">
+            https://screentop.gg/@jschomay/deductiondungeon
+          </a>
+        </p>
+        <p>
+          For physical prototype
+          <a href="mailto:contact@jeffschomay.games" class="underline inline" title="contact">
+            contact@jeffschomay.games
+          </a>
+        </p>
       </div>
 
       <div
-        class="w-full p-4 mt-4 rounded-md flex flex-col flex-grow justify-start items-start flex-shrink bg-dark text-secondary">
-        <h3 class="w-full font-bold text-xl text-center mb-2">
-          Play the prototype
-        </h3>
-        <ul class="list-disc list-inside text-left">
-          <li class="">
-            <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2685250690" class="underline mb-2"
-              title="Play the digital prototype">
-              Play the digital prototype on Tabletop Simulator
-            </a>
-          </li>
-          <li class="">
-            <a href="mailto:contact@jeffschomay.games" class="underline" title="contact">
-              Contact Jeff Schomay for physical prototype
-            </a>
-          </li>
+        class="p-4 w-full sm:w-auto mb-4 sm:mr-4 rounded-md flex flex-col flex-grow justify-start items-center flex-shrink bg-primary text-light">
+        <ul class="text-left">
+          <div class="w-full mb-2"> Box contains:</div>
+          <li>16 Adventurer cards</li>
+          <li>16 Monster cards</li>
+          <li>12 Treasure cards</li>
+          <li>16 Monster cards</li>
+          <li>8 Strength tiles</li>
+          <li>8 Guess tiles</li>
+          <li>2 Rule cards</li>
+          <li>14 Gold cubes</li>
+          <li>1 Play mat</li>
         </ul>
       </div>
+
+      <div
+        class="p-4 w-full sm:w-auto mb-4 sm:mr-4 rounded-md flex flex-col flex-grow justify-start items-center flex-shrink bg-primary text-light">
+        <a href="deduction-dungeon-sell-sheet.pdf" title="Download sell sheet">
+          <img class="h-60 border-[1px] border-secondary" src="img/sellsheet-thumb.jpg"
+            alt="Deduction Dungeon Sell Sheet" />
+        </a>
+        <div class="w-full text-center"> Sell sheet </div>
+      </div>
+
+      <div
+        class="p-4 w-full sm:w-auto mb-4 rounded-md flex flex-col flex-grow justify-start items-center flex-shrink bg-primary text-light">
+        <a href="deduction-dungeon-rules.pdf" title="Download rules">
+          <img class="h-60 border-[1px] border-secondary" src="img/rules-thumb.png" alt="Deduction Dungeon rules" />
+        </a>
+        <div class="w-full text-center mb-2"> Rules </div>
+      </div>
+
+
     </div>
   </section>
   <!--Footer-->
@@ -311,17 +256,13 @@
             <li class="mt-2 md:mr-0">
               <a href="mailto:contact@jeffschomay.games" class="underline">contact@jeffschomay.games</a>
             </li>
-            <li class="mt-2 md:mr-0">
-              <a href="https://landing.mailerlite.com/webforms/landing/b1p1o8" class="underline">Get updates for Forest
-                of Facades</a>
-            </li>
           </ul>
         </div>
       </div>
     </div>
   </footer>
 
-  <script data-goatcounter="https://forest-of-facades.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script data-goatcounter="https://deduction-dungeon.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   <!-- MailerLite Universal -->
   <script>
     (function (m, a, i, l, e, r) {
@@ -353,5 +294,31 @@
 
   <script src="lightbox/lightbox.min.js"></script>
 </body>
+
+</html>
+
+</html>
+
+</html>
+
+</html>
+
+</html>
+
+</html>
+
+</html>
+
+</html>
+
+</html>
+
+</html>
+
+</html>
+
+</html>
+
+</html>
 
 </html>
